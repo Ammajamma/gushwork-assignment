@@ -1,0 +1,275 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    line-height: 1.5;
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* =========================
+   HEADER / NAVBAR
+========================= */
+
+/* Sticky Header */
+.header {
+    position: sticky;
+    top: 0;
+    background: #111111;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Navbar Layout */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    flex-wrap: wrap;
+}
+
+/* Logo Image */
+.logo img {
+    height: 35px;
+    width: auto;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+/* Navigation Link Styling */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Nav Links */
+.nav-links a:hover {
+    color: #cccccc;
+}
+
+/* Toggle Button Hidden on Desktop */
+.toggle-btn {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Hero Heading */
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+/* Hero Paragraph */
+.hero p {
+    font-size: 18px;
+    color: #555555;
+}
+
+
+/* =========================
+   IMAGE CAROUSEL SECTION
+========================= */
+
+.carousel-section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+/* Carousel Title */
+.carousel-section h2 {
+    margin-bottom: 20px;
+}
+
+/* Carousel Layout */
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+/* Carousel Images */
+.carousel img {
+    width: 380px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Zoom Effect on Hover */
+.carousel img:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   FEATURES SECTION
+========================= */
+
+.features {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+/* Feature Section Title */
+.features h2 {
+    margin-bottom: 20px;
+}
+
+/* Feature Cards Layout */
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Feature Card */
+.card {
+    width: 220px;
+    padding: 20px;
+    background: #f3f3f3;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111111;
+    color: white;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Show Toggle Button on Mobile */
+    .toggle-btn {
+        display: block;
+    }
+
+    /* Mobile Navigation Menu */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        padding: 10px 0;
+    }
+
+    /* Show Menu When Active */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Mobile Navigation Links */
+    .nav-links a {
+        color: black;
+        padding: 10px 20px;
+        display: block;
+    }
+
+    /* Navbar Alignment for Mobile */
+    .navbar {
+        align-items: flex-start;
+    }
+
+    /* Hero Section Responsive */
+    .hero {
+        height: 60vh;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* Carousel Responsive */
+    .carousel-section {
+        padding: 40px 20px;
+    }
+
+    .carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    /* Features Responsive */
+    .features {
+        padding: 40px 20px;
+    }
+
+    .feature-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
+}
